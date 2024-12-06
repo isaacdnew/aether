@@ -7,7 +7,7 @@
       {{ if or (not (eq .Description "")) (not (eq .Title "")) -}}
       <header class="home-header" style="background-image: url('{{ "img/home-blob.svg" | absURL }}');">
         <div class="home-blob-text-container">
-        {{ with .Title }}<h1 class="home-blob-title">{{ . }}</h1>{{ end }}
+        {{ with .Title }}<h1 class="home-blob-title">{{ . | markdownify }}</h1>{{ end }}
         {{ with .Description }}<p class="home-blob-text">{{ . }}</p>{{ end }}
         </div>
         {{ with resources.GetMatch .Site.Params.headshotimg -}}
@@ -17,7 +17,7 @@
             {{ $faceshot_x2 := .Resize "544x Lanczos" }}
             {{ $faceshot_x3 := .Resize "816x Lanczos" }}
             <source srcset="{{ $faceshot.Permalink }} 1x, {{ $faceshot_x2.Permalink }} 2x, {{ $faceshot_x3.Permalink }} 3x">
-            <img class="home-faceshot" src="{{ $faceshot.Permalink }}" {{ with .Params.description -}} alt="{{ . }}" {{- end }}>
+            <img class="home-faceshot" src="{{ $faceshot.Permalink }}" {{ with $.Site.Params.headshotalt -}} alt="{{ . }}" {{- end }}>
           </picture>
         </div>
         {{ end -}}

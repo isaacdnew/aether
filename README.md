@@ -1,4 +1,7 @@
 # aether
+
+[![Validate Generated Files](https://github.com/josephhutch/aether/actions/workflows/main.yml/badge.svg)](https://github.com/josephhutch/aether/actions/workflows/main.yml)
+
 Aether is a Hugo theme for blogs that emphasizes motion, depth, and material as design elements.  Aether presents your content in a clean interface that highlights good photography and writing.
 
 ## Features
@@ -34,12 +37,25 @@ googleAnalytics = "Your google analytics tracking ID - optional"
 disqusShortname = "Your shortname for Disqus - optional"
 
 [params]
-	brand = "The name that is displayed in the top left of the website, consider it the website name"
-	description = "The website's description"
-  github = "URL to your Github account - link will be included in the footer"
-  linkedin = "URL to your Linkedin account - link will be included in the footer"
-	bgimg = "Path, within the 'assets' folder, of the image used for the page background - optional"
-	rssinmenu = whether you would like a RSS feed link to appear in the navigation menu (true, false) - optional
+  brand = "The name that is displayed in the top left of the website - optional, title is fallback"
+  description = "The website's description"
+  bgimg = "Path, within the 'assets' folder, of the image used for the page background - optional"
+  headshotimg = "Path, within the 'assets' folder, of the image used for the home page header - optional"
+  headshotalt = "Alt text for the headshotimg - should be used with headshotimg"
+  rssinmenu = whether you would like a RSS feed link to appear in the nav menu and footer (true, false) - optional
+  facebook = "URL to your Facebook account, icon link will be included in the footer - optional"
+  flicker = "URL to your Flicker account, icon link will be included in the footer - optional"
+  github = "URL to your GitHub account, icon link will be included in the footer - optional"
+  instagram = "URL to your Instagram account, icon link will be included in the footer - optional"
+  linkedin = "URL to your LinkedIn account, icon link will be included in the footer - optional"
+  patreon = "URL to your Patreon account, icon link will be included in the footer - optional"
+  soundcloud = "URL to your Soundcloud account, icon link will be included in the footer - optional"
+  spotify = "URL to your Spotify account, icon link will be included in the footer - optional"
+  tumblr = "URL to your Tumblr account, icon link will be included in the footer - optional"
+  twitch = "URL to your Twitch account, icon link will be included in the footer - optional"
+  twitter = "URL to your Twitter account, icon link will be included in the footer - optional"
+  vimeo = "URL to your Vimeo account, icon link will be included in the footer - optional"
+  youtube = "URL to your Youtube account, icon link will be included in the footer - optional"
 
 [markup]
   [markup.highlight]
@@ -159,7 +175,7 @@ Refer to [/exampleSite/layouts/partials](/exampleSite/layouts/partials) for samp
 [Latex Math Documentation](https://en.wikibooks.org/wiki/LaTeX/Mathematics) - Learn math typesetting with LaTeX (powered by KaTeX)
 
 ## Contributing
-Aether is actively maintained and I welcome you to help make it better! Contributions in the way of new features, documentation improvements, bug fixes, and feature requests are appreciated. Please make an individual pull-request/issue for each suggestion.
+Aether is actively maintained and I welcome you to help make it better! Contributions in the way of new features, documentation improvements, bug fixes, and feature requests are appreciated. Please make an individual pull-request/issue for each suggestion.  PRs are tested in GitHub Actions to ensure the html and css generated from the example site are valid.
 
 ## License
 MIT © Joe Hutchinson
